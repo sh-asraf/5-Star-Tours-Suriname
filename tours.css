@@ -1,0 +1,482 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #e6f2e6, #ffffff);
+  color: #000000;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Main Content Area */
+main {
+  flex-grow: 1;
+}
+
+/* Page-Specific Layouts */
+body.about-page,
+body.videos-page,
+body.contact-page {
+  background: linear-gradient(to bottom, #e6f2e6, #ffffff);
+}
+
+/* About Section */
+.about-section {
+  background-color: #f1f8e9;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.about-section ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  color: #000000;
+}
+
+.about-section li {
+  margin-bottom: 0.5rem;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background-color: #a5d6a7;
+  margin: 2rem 0;
+}
+
+/* Visuals Page */
+.tab-section {
+  background-color: #f1f8e9;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.tab-section h3 {
+  color: #2e7d32;
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+iframe {
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+iframe:hover {
+  transform: scale(1.02);
+}
+
+/* Contact Page */
+.map-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.map-frame {
+  width: 80%;
+  max-width: 800px;
+  height: 300px;
+  border: 3px solid #198754;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Game Page */
+  #puzzle {
+      display: grid;
+      grid-template-columns: repeat(4, 100px);
+      grid-template-rows: repeat(4, 100px);
+      gap: 2px;
+      margin: 20px auto;
+      width: 408px;
+      background: #333;
+    }
+
+    .piece {
+      width: 100px;
+      height: 100px;
+      background-image: url('https://i.postimg.cc/cL6zR01q/basiliek.jpg');
+      background-size: 400px 400px;
+      border: 2px solid #555;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+      cursor: grab;
+      transition: transform 0.1s;
+    }
+
+    .piece:active {
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 576px) {
+      #puzzle {
+        width: 100%;
+        max-width: 408px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+      }
+
+      .piece {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+      }
+    }
+/* End Game Page */
+
+
+/* Navigation Bar */
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  background-color: #2e6f40;
+  padding: 1rem;
+  list-style: none;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.nav-bar li {
+  margin: 0;
+}
+
+.nav-bar a {
+  color: #c1dec8;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: color 0.3s ease;
+}
+
+.nav-bar a:hover {
+  color: #7fb38f;
+}
+
+.nav-bar a.active {
+  background-color: #388e3c;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+/* Logo */
+.logo-img {
+  height: 90px;
+  margin-bottom: 0.5rem;
+}
+
+/* Carousel */
+.headerimage {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  background-color: rgba(0, 100, 72, 0);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* Section Titles */
+.h1s1 {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 2.5rem;
+  color: #213f2c;
+}
+
+.h1s2 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #6d8f72;
+}
+
+/* Cards */
+.card {
+  border: none;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card-title {
+  color: #7d2e2e;
+  font-size: 1.5rem;
+}
+
+.card-text {
+  color: #4e5d52;
+}
+
+/* Tabs */
+.nav-tabs .nav-link {
+  color: #2b8464;
+  font-weight: bold;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: #a5d6a7;
+  color: #1b5e20;
+}
+
+#tourTabsContent {
+  padding-left: 1.5rem;
+}
+
+/* Loader Animation */
+.loader {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: #e6f2e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeOut 3s forwards;
+  transition: opacity 0.5s ease;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #2e7d32;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fadeOut {
+  to { opacity: 0; visibility: hidden; }
+}
+
+/* Search Bar */
+.search-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-left: auto;
+}
+
+.search-form input {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.search-form button {
+  padding: 0.5rem 1rem;
+  background-color: #388e3c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .search-form {
+    width: 100%;
+    margin-top: 1rem;
+    justify-content: center;
+  }
+}
+
+/* Footer */
+.footer {
+  background-color: #2e7d32;
+  color: #fff;
+  padding: 2rem 0;
+  text-align: left;
+  margin-top: auto;
+  width: 100%;
+}
+
+.footer h5 {
+  color: #c8e6c9;
+}
+
+.footer a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.social-icons a {
+  color: #c8e6c9;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+/* Carousel Controls */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: brightness(0);
+}
+
+.btn-success {
+  background-color: #388e3c;
+  border: none;
+  font-weight: bold;
+}
+
+.btn-success:hover {
+  background-color: #2e7d32;
+}
+
+/* Tablets and small laptops */
+@media (max-width: 992px) {
+  .carousel-caption {
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+
+  .card-title {
+    font-size: 1.3rem;
+  }
+
+  .footer {
+    padding: 1.5rem;
+  }
+}
+
+/* Phones and small tablets */
+@media (max-width: 768px) {
+  .headerimage {
+    height: 300px;
+  }
+
+  .h1s1 {
+    font-size: 2rem;
+  }
+
+  .h1s2 {
+    font-size: 1.3rem;
+  }
+
+  .card {
+    margin-bottom: 1rem;
+  }
+
+  .logo-img {
+    height: 50px;
+  }
+
+  .footer {
+    text-align: center;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 480px) {
+  .headerimage {
+    height: 250px;
+  }
+
+  .h1s1 {
+    font-size: 1.8rem;
+  }
+
+  .h1s2 {
+    font-size: 1.1rem;
+  }
+
+  .logo-img {
+    height: 40px;
+  }
+
+  .carousel-caption {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  .footer {
+    padding: 1rem;
+  }
+
+  .nav-bar a {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+/* Sidemenu: Floating External Links */
+.floating-side-menu {
+  padding: 1rem 2rem;
+  max-width: 220px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  background-color: transparent;
+  margin-top: 1rem;
+  margin-left: 2rem;
+  margin-right: auto;
+}
+
+
+.floating-side-menu h5 {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color:  #2d6b2c;
+}
+
+.floating-side-menu ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.floating-side-menu li {
+  margin-bottom: 0.4rem;
+}
+
+.floating-side-menu a {
+color: #398a38;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.floating-side-menu a:hover {
+  color: #7f9e7b;
+  text-decoration: underline;
+}
+
+/* Responsive fallback */
+@media (max-width: 768px) {
+  .floating-side-menu {
+    position: static;
+    margin: 1rem auto;
+    text-align: center;
+  }
+
+  .floating-side-menu h5,
+  .floating-side-menu ul {
+    text-align: center;
+  }
+}
