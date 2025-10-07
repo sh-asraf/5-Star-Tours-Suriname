@@ -20,9 +20,9 @@ main {
 }
 
 /* Page-Specific Layouts */
-body.about-page,
-body.videos-page,
-body.contact-page {
+.body.about-page,
+.body.videos-page,
+.body.contact-page {
   background: linear-gradient(to bottom, #e6f2e6, #ffffff);
 }
 
@@ -103,6 +103,19 @@ iframe:hover {
       margin: 20px auto;
       width: 408px;
       background: #333;
+    }
+
+    .pgame {
+      text-align: center;
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+
+    #message {
+      text-align: center;
+      font-size: 1.3rem;
+      font-weight: bold;
+      margin-top: 1.5rem;
     }
 
     .piece {
@@ -190,22 +203,6 @@ iframe:hover {
   background-color: rgba(0, 100, 72, 0);
   padding: 1rem;
   border-radius: 8px;
-}
-
-/* Carousel Controls */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  filter: brightness(0);
-}
-
-.btn-success {
-  background-color: #388e3c;
-  border: none;
-  font-weight: bold;
-}
-
-.btn-success:hover {
-  background-color: #2e7d32;
 }
 
 /* Section Titles */
@@ -318,91 +315,6 @@ iframe:hover {
   }
 }
 
-/* Dropdown Menu Styling */
-.nav-item.dropdown .dropdown-toggle {
-  color: #c1dec8;
-  font-weight: bold;
-  background-color: transparent;
-  border: none;
-}
-
-.nav-item.dropdown .dropdown-toggle:hover {
-  color: #7fb38f;
-}
-
-.dropdown-menu {
-  background-color: #86e8b713 !important;
-  border: none !important;
-  box-shadow: none !important;
-}
-
-.dropdown-menu .dropdown-item {
-  background-color: transparent;
-  color: #2e6f40;
-  font-weight: 500;
-  padding: 0.5rem 1.5rem;
-  transition: background-color 0.3s ease;
-}
-
-.dropdown-menu .dropdown-item:hover {
-  background-color: rgba(200, 230, 201, 0.6);
-  color: #1b5e20;
-}
-
-/* Sidemenu: Floating External Links */
-.floating-side-menu {
-  padding: 1rem 2rem;
-  max-width: 220px;
-  font-size: 0.95rem;
-  line-height: 1.4;
-  background-color: transparent;
-  margin-top: 1rem;
-  margin-left: 2rem;
-  margin-right: auto;
-}
-
-
-.floating-side-menu h5 {
-  margin-bottom: 0.5rem;
-  font-size: 1rem;
-  font-weight: bold;
-  color:  #2d6b2c;
-}
-
-.floating-side-menu ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.floating-side-menu li {
-  margin-bottom: 0.4rem;
-}
-
-.floating-side-menu a {
-color: #398a38;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.floating-side-menu a:hover {
-  color: #7f9e7b;
-  text-decoration: underline;
-}
-
-/* Responsive fallback */
-@media (max-width: 768px) {
-  .floating-side-menu {
-    position: static;
-    margin: 1rem auto;
-    text-align: center;
-  }
-
-  .floating-side-menu h5,
-  .floating-side-menu ul {
-    text-align: center;
-  }
-}
-
 /* Footer */
 .footer {
   background-color: #2e7d32;
@@ -430,6 +342,22 @@ color: #398a38;
   color: #c8e6c9;
   font-size: 1.5rem;
   margin-right: 1rem;
+}
+
+/* Carousel Controls */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: brightness(0);
+}
+
+.btn-success {
+  background-color: #388e3c;
+  border: none;
+  font-weight: bold;
+}
+
+.btn-success:hover {
+  background-color: #2e7d32;
 }
 
 /* Tablets and small laptops */
@@ -512,3 +440,87 @@ color: #398a38;
   }
 }
 
+/* Sidemenu: Floating External Links */
+.floating-side-menu {
+  padding: 1rem 2rem;
+  max-width: 220px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  background-color: transparent;
+  margin-top: 1rem;
+  margin-left: 2rem;
+  margin-right: auto;
+}
+
+
+.floating-side-menu h5 {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color:  #2d6b2c;
+}
+
+.floating-side-menu ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.floating-side-menu li {
+  margin-bottom: 0.4rem;
+}
+
+.floating-side-menu a {
+color: #398a38;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.floating-side-menu a:hover {
+  color: #7f9e7b;
+  text-decoration: underline;
+}
+
+/* Dropdown Menu Styling */
+.nav-item.dropdown .dropdown-toggle {
+  color: #c1dec8;
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+}
+
+.nav-item.dropdown .dropdown-toggle:hover {
+  color: #7fb38f;
+}
+
+.dropdown-menu {
+  background-color: #86e8b713 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.dropdown-menu .dropdown-item {
+  background-color: transparent;
+  color: #2e6f40;
+  font-weight: 500;
+  padding: 0.5rem 1.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: rgba(200, 230, 201, 0.6);
+  color: #1b5e20;
+}
+
+/* Responsive fallback */
+@media (max-width: 768px) {
+  .floating-side-menu {
+    position: static;
+    margin: 1rem auto;
+    text-align: center;
+  }
+
+  .floating-side-menu h5,
+  .floating-side-menu ul {
+    text-align: center;
+  }
+}
